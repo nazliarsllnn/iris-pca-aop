@@ -1,0 +1,141 @@
+2026-11-26 16:29:18 INFO  o.e.iris.aspect.PerformanceAspect - [AOP-LOG] Başladı: DataService.loadData()
+2026-11-26 16:29:18 INFO  o.e.iris.aspect.PerformanceAspect - [AOP-LOG] Başarılı: DataService.loadData()
+2026-11-26 16:29:18 INFO  o.e.iris.aspect.PerformanceAspect - [AOP-PERFORMANCE] Süre: 10.2619 ms
+2026-11-26 16:29:18 INFO  o.e.iris.aspect.PerformanceAspect - [AOP-LOG] Başladı: DataService.getData()
+2026-11-26 16:29:18 INFO  o.e.iris.aspect.PerformanceAspect - [AOP-LOG] Başarılı: DataService.getData()
+2026-11-26 16:29:18 INFO  o.e.iris.aspect.PerformanceAspect - [AOP-PERFORMANCE] Süre: 0.2955 ms
+2026-11-26 16:29:18 INFO  o.e.iris.aspect.PerformanceAspect - [AOP-LOG] Başladı: ValidationService.validateData(..)
+2026-11-26 16:29:18 INFO  o.e.iris.aspect.PerformanceAspect - [AOP-LOG] Başarılı: ValidationService.validateData(..)
+2026-11-26 16:29:18 INFO  o.e.iris.aspect.PerformanceAspect - [AOP-PERFORMANCE] Süre: 2.4103 ms
+2026-11-26 16:29:18 INFO  o.e.iris.aspect.PerformanceAspect - [AOP-LOG] Başladı: PCAService.applyPCA(..)
+2026-11-26 16:29:19 INFO  o.e.iris.aspect.PerformanceAspect - [AOP-LOG] Başarılı: PCAService.applyPCA(..)
+2026-11-26 16:29:19 INFO  o.e.iris.aspect.PerformanceAspect - [AOP-PERFORMANCE] Süre: 843.4958 ms
+2026-11-26 16:29:19 INFO  o.e.iris.aspect.PerformanceAspect - [AOP-LOG] Başladı: DataService.getLabels()
+2026-11-26 16:29:19 INFO  o.e.iris.aspect.PerformanceAspect - [AOP-LOG] Başarılı: DataService.getLabels()
+2026-11-26 16:29:19 INFO  o.e.iris.aspect.PerformanceAspect - [AOP-PERFORMANCE] Süre: 0.1733 ms
+2026-11-26 16:29:19 INFO  o.e.iris.aspect.PerformanceAspect - ===== AOP PERFORMANS RAPORU =====
+2026-11-26 16:29:19 INFO  o.e.iris.aspect.PerformanceAspect - Toplam metot çağrısı: 5
+2026-11-26 16:29:19 INFO  o.e.iris.aspect.PerformanceAspect - Toplam çalışma süresi: 856.6368 ms
+2026-11-26 16:29:19 INFO  o.e.iris.aspect.PerformanceAspect - Toplam hata sayısı: 0
+2026-11-26 16:29:19 INFO  o.e.iris.aspect.PerformanceAspect - Ortalama süre: 171.32736 ms
+2026-11-26 16:29:19 INFO  o.e.iris.aspect.PerformanceAspect - =================================
+2026-11-26 16:38:11 INFO  o.e.iris.aspect.PerformanceAspect - [AOP-LOG] Başladı: DataService.loadData()
+2026-11-26 16:38:11 INFO  o.e.iris.aspect.PerformanceAspect - [AOP-LOG] Başarılı: DataService.loadData()
+2026-11-26 16:38:11 INFO  o.e.iris.aspect.PerformanceAspect - [AOP-PERFORMANCE] Süre: 8.1851 ms
+2026-11-26 16:38:11 INFO  o.e.iris.aspect.PerformanceAspect - [AOP-LOG] Başladı: DataService.getData()
+2026-11-26 16:38:11 INFO  o.e.iris.aspect.PerformanceAspect - [AOP-LOG] Başarılı: DataService.getData()
+2026-11-26 16:38:11 INFO  o.e.iris.aspect.PerformanceAspect - [AOP-PERFORMANCE] Süre: 0.2069 ms
+2026-11-26 16:38:11 INFO  o.e.iris.aspect.PerformanceAspect - [AOP-LOG] Başladı: ValidationService.validateData(..)
+2026-11-26 16:38:11 ERROR o.e.iris.aspect.PerformanceAspect - [AOP-ERROR] ValidationService.validateData(..) hata verdi
+java.lang.IllegalArgumentException: Veri null olamaz!
+	at org.example.iris.service.ValidationService.validateData(ValidationService.java:11)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89)
+	at org.example.iris.aspect.PerformanceAspect.monitorMethods(PerformanceAspect.java:29)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:642)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:632)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:71)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:728)
+	at org.example.iris.service.ValidationService$$SpringCGLIB$$0.validateData(<generated>)
+	at org.example.iris.Main.main(Main.java:39)
+2026-11-26 16:38:27 INFO  o.e.iris.aspect.PerformanceAspect - [AOP-LOG] Başladı: DataService.loadData()
+2026-11-26 16:38:27 INFO  o.e.iris.aspect.PerformanceAspect - [AOP-LOG] Başarılı: DataService.loadData()
+2026-11-26 16:38:27 INFO  o.e.iris.aspect.PerformanceAspect - [AOP-PERFORMANCE] Süre: 12.4046 ms
+2026-11-26 16:38:27 INFO  o.e.iris.aspect.PerformanceAspect - [AOP-LOG] Başladı: DataService.getData()
+2026-11-26 16:38:27 INFO  o.e.iris.aspect.PerformanceAspect - [AOP-LOG] Başarılı: DataService.getData()
+2026-11-26 16:38:27 INFO  o.e.iris.aspect.PerformanceAspect - [AOP-PERFORMANCE] Süre: 0.3042 ms
+2026-11-26 16:38:27 INFO  o.e.iris.aspect.PerformanceAspect - [AOP-LOG] Başladı: ValidationService.validateData(..)
+2026-11-26 16:38:27 ERROR o.e.iris.aspect.PerformanceAspect - [AOP-ERROR] ValidationService.validateData(..) hata verdi
+java.lang.IllegalArgumentException: Veri null olamaz!
+	at org.example.iris.service.ValidationService.validateData(ValidationService.java:11)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89)
+	at org.example.iris.aspect.PerformanceAspect.monitorMethods(PerformanceAspect.java:29)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:642)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:632)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:71)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:728)
+	at org.example.iris.service.ValidationService$$SpringCGLIB$$0.validateData(<generated>)
+	at org.example.iris.Main.main(Main.java:39)
+2026-11-26 16:49:07 INFO  o.e.iris.aspect.PerformanceAspect - [AOP-LOG] Başladı: DataService.loadData()
+2026-11-26 16:49:07 INFO  o.e.iris.aspect.PerformanceAspect - [AOP-LOG] Başarılı: DataService.loadData()
+2026-11-26 16:49:07 INFO  o.e.iris.aspect.PerformanceAspect - [AOP-PERFORMANCE] Süre: 10.2952 ms
+2026-11-26 16:49:07 INFO  o.e.iris.aspect.PerformanceAspect - [AOP-LOG] Başladı: DataService.getData()
+2026-11-26 16:49:07 INFO  o.e.iris.aspect.PerformanceAspect - [AOP-LOG] Başarılı: DataService.getData()
+2026-11-26 16:49:07 INFO  o.e.iris.aspect.PerformanceAspect - [AOP-PERFORMANCE] Süre: 0.1962 ms
+2026-11-26 16:49:07 INFO  o.e.iris.aspect.PerformanceAspect - [AOP-LOG] Başladı: ValidationService.validateData(..)
+2026-11-26 16:49:07 INFO  o.e.iris.aspect.PerformanceAspect - [AOP-LOG] Başarılı: ValidationService.validateData(..)
+2026-11-26 16:49:07 INFO  o.e.iris.aspect.PerformanceAspect - [AOP-PERFORMANCE] Süre: 0.3814 ms
+2026-11-26 16:49:07 INFO  o.e.iris.aspect.PerformanceAspect - [AOP-LOG] Başladı: ValidationService.validateData(..)
+2026-11-26 16:49:07 ERROR o.e.iris.aspect.PerformanceAspect - [AOP-ERROR] ValidationService.validateData(..) hata verdi
+java.lang.IllegalArgumentException: Veri null olamaz!
+	at org.example.iris.service.ValidationService.validateData(ValidationService.java:11)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89)
+	at org.example.iris.aspect.PerformanceAspect.monitorMethods(PerformanceAspect.java:29)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:642)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:632)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:71)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:728)
+	at org.example.iris.service.ValidationService$$SpringCGLIB$$0.validateData(<generated>)
+	at org.example.iris.Main.main(Main.java:41)
+2026-11-26 16:49:07 INFO  o.e.iris.aspect.PerformanceAspect - [AOP-LOG] Başladı: PCAService.applyPCA(..)
+2026-11-26 16:49:08 INFO  o.e.iris.aspect.PerformanceAspect - [AOP-LOG] Başarılı: PCAService.applyPCA(..)
+2026-11-26 16:49:08 INFO  o.e.iris.aspect.PerformanceAspect - [AOP-PERFORMANCE] Süre: 681.4989 ms
+2026-11-26 16:49:08 INFO  o.e.iris.aspect.PerformanceAspect - [AOP-LOG] Başladı: DataService.getLabels()
+2026-11-26 16:49:08 INFO  o.e.iris.aspect.PerformanceAspect - [AOP-LOG] Başarılı: DataService.getLabels()
+2026-11-26 16:49:08 INFO  o.e.iris.aspect.PerformanceAspect - [AOP-PERFORMANCE] Süre: 0.2208 ms
+2026-11-26 16:49:08 INFO  o.e.iris.aspect.PerformanceAspect - ===== AOP PERFORMANS RAPORU =====
+2026-11-26 16:49:08 INFO  o.e.iris.aspect.PerformanceAspect - Toplam metot çağrısı: 6
+2026-11-26 16:49:08 INFO  o.e.iris.aspect.PerformanceAspect - Toplam çalışma süresi: 692.7654 ms
+2026-11-26 16:49:08 INFO  o.e.iris.aspect.PerformanceAspect - Toplam hata sayısı: 1
+2026-11-26 16:49:08 INFO  o.e.iris.aspect.PerformanceAspect - Ortalama süre: 115.4609 ms
+2026-11-26 16:49:08 INFO  o.e.iris.aspect.PerformanceAspect - =================================
+2026-11-26 16:52:57 INFO  o.e.iris.aspect.PerformanceAspect - [AOP-LOG] Başladı: DataService.loadData()
+2026-11-26 16:52:57 INFO  o.e.iris.aspect.PerformanceAspect - [AOP-LOG] Başarılı: DataService.loadData()
+2026-11-26 16:52:57 INFO  o.e.iris.aspect.PerformanceAspect - [AOP-PERFORMANCE] Süre: 11.8691 ms
+2026-11-26 16:52:57 INFO  o.e.iris.aspect.PerformanceAspect - [AOP-LOG] Başladı: DataService.getData()
+2026-11-26 16:52:57 INFO  o.e.iris.aspect.PerformanceAspect - [AOP-LOG] Başarılı: DataService.getData()
+2026-11-26 16:52:57 INFO  o.e.iris.aspect.PerformanceAspect - [AOP-PERFORMANCE] Süre: 0.3269 ms
+2026-11-26 16:52:57 INFO  o.e.iris.aspect.PerformanceAspect - [AOP-LOG] Başladı: ValidationService.validateData(..)
+2026-11-26 16:52:57 INFO  o.e.iris.aspect.PerformanceAspect - [AOP-LOG] Başarılı: ValidationService.validateData(..)
+2026-11-26 16:52:57 INFO  o.e.iris.aspect.PerformanceAspect - [AOP-PERFORMANCE] Süre: 0.4513 ms
+2026-11-26 16:52:57 INFO  o.e.iris.aspect.PerformanceAspect - [AOP-LOG] Başladı: PCAService.applyPCA(..)
+2026-11-26 16:52:58 INFO  o.e.iris.aspect.PerformanceAspect - [AOP-LOG] Başarılı: PCAService.applyPCA(..)
+2026-11-26 16:52:58 INFO  o.e.iris.aspect.PerformanceAspect - [AOP-PERFORMANCE] Süre: 898.0898 ms
+2026-11-26 16:52:58 INFO  o.e.iris.aspect.PerformanceAspect - [AOP-LOG] Başladı: DataService.getLabels()
+2026-11-26 16:52:58 INFO  o.e.iris.aspect.PerformanceAspect - [AOP-LOG] Başarılı: DataService.getLabels()
+2026-11-26 16:52:58 INFO  o.e.iris.aspect.PerformanceAspect - [AOP-PERFORMANCE] Süre: 0.2961 ms
+2026-11-26 16:52:58 INFO  o.e.iris.aspect.PerformanceAspect - ===== AOP PERFORMANS RAPORU =====
+2026-11-26 16:52:58 INFO  o.e.iris.aspect.PerformanceAspect - Toplam metot çağrısı: 5
+2026-11-26 16:52:58 INFO  o.e.iris.aspect.PerformanceAspect - Toplam çalışma süresi: 911.0332 ms
+2026-11-26 16:52:58 INFO  o.e.iris.aspect.PerformanceAspect - Toplam hata sayısı: 0
+2026-11-26 16:52:58 INFO  o.e.iris.aspect.PerformanceAspect - Ortalama süre: 182.20664 ms
+2026-11-26 16:52:58 INFO  o.e.iris.aspect.PerformanceAspect - =================================
