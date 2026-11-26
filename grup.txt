@@ -1,0 +1,6 @@
+ÖDEV ADI: Iris Veri Seti Üzerinde PCA ve AOP Uygulaması
+
+ÖĞRENCİ BİLGİLERİ
+
+Ad Soyad: Nazlı ARSLAN
+Öğrenci Numarası: 1250505081
